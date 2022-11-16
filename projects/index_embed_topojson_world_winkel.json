@@ -1,0 +1,35 @@
+{
+	"$schema": "https://gjrichter.github.io/ixmaps/schema/ixmaps/v1.json",
+	"map": {
+		"map": "../../maps/svg/maps/generic/winkel.svg",
+		"basemap": "white",
+		"center": {
+			"lat": "13.239945499286312",
+			"lng": "23.203125000000004"
+			},
+		"zoom": "2"
+		},
+	"themes": [{
+		"layer": "World_countries",
+		"data":{
+			"name": "georef",
+			"url": "https://s3.eu-central-1.amazonaws.com/maps.ixmaps.com/topojson/CNTR_RG_10M_2020_4326.json",
+			"type": "topojson"
+		},
+		"binding": {
+			"id": "ISO3_CODE",
+			"position": "geometry",
+			"title": "NAME_ENGL"
+		},
+		"style": {
+			"type": "FEATURES|NOLEGEND",
+			"colorscheme": [
+				"#dddddd"],
+			"fillopacity": "0.7",
+			"linecolor": [
+				"white"],
+			"linewidth": "1",
+			"title": "Countries"
+			}
+		}]
+	}

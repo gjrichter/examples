@@ -1,0 +1,60 @@
+{
+	"$schema": "https://gjrichter.github.io/ixmaps/schema/ixmaps/v1.json",
+	"map": {
+		"map": "../../maps/svg/maps/generic/winkel.svg",
+		"basemap": "white",
+		"center": {
+			"lat": "13.239945499286312",
+			"lng": "23.203125000000004"
+			},
+		"zoom": "2"
+		},
+	"themes": [{
+		"layer": "World_countries",
+		"data":{
+			"name": "georef",
+			"url": "https://s3.eu-central-1.amazonaws.com/maps.ixmaps.com/topojson/CNTR_RG_10M_2020_4326.json",
+			"type": "topojson"
+		},
+		"binding": {
+			"id": "ISO3_CODE",
+			"position": "geometry",
+			"title": "NAME_ENGL"
+		},
+		"type": "FEATURES|NOLEGEND",
+		"style": {
+			"colorscheme": [
+				"#dddddd"],
+			"fillopacity": "0.7",
+			"linecolor": [
+				"white"],
+			"linewidth": "1",
+			"title": "Countries"
+			}
+		},{
+		"layer": "World_countries",
+		"data":{
+			"name": "vaccinations_data",
+			"url": "https://raw.githubusercontent.com/owid/covid-19-data/master/public/data/vaccinations/vaccinations.csv",
+			"type": "csv"
+		},
+		"binding": {
+			"value": "people_fully_vaccinated_per_hundred",
+			"position": "iso_code",
+			"aggregation": "iso_code",
+			"title": "location"
+		},
+		"type": "CHOROPLETH|QUANTILE|DTEXT|VALUEBACKGROUND|VALUES|AGGREGATE|MAX",
+		"style": {
+			"colorscheme": [
+				"15",
+				"#A8DAB5",
+				"#0D652D",
+				"2colors"],
+			"fillopacity": "0.5",
+			"units": "%",
+			"textcolor": "white",
+			"title": "COVID-19 <br> Percent of population fully vaccinated"
+			}
+		}]
+	}
