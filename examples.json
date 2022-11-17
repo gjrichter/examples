@@ -11,10 +11,6 @@
         "name": "index_embed_topojson_world_winkel_vaccinated",
         "title": "Vaccine World Map",
         "description": "The bar gets automatically resized based on container size. To see how the bar gets automatically resized try this in [the editor](https://vega.github.io/editor/#/examples/vega-lite/bar_size_responsive)."
-<<<<<<< HEAD
       }]
-=======
-      }],
->>>>>>> d8d7529662afd70c75f35ef8ae112486bf2abb2f
    }
 }
